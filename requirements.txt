@@ -3,3 +3,5 @@ matplotlib~=3.10.7
 kaggle~=1.5.16
 pandas~=2.2.3
 nltk~=3.9.2
+joblib~=1.5.2
+scikit-learn~=1.7.2

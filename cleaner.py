@@ -19,16 +19,19 @@ def preprocess(text):
     return " ".join(words)
 
 
-data = pd.read_csv("data/ai-vs-human-text/AI_Human.csv")
+def main():
+    data = pd.read_csv("data/ai-vs-human-text/balanced_ai_human_prompts.csv")
 
 
-data['generated'] = data['generated'].astype(int)
+    data['generated'] = data['generated'].astype(int)
 
-#modify the text by removing stop words and lemmatizing
-data['text'] = data['text'].apply(preprocess)
+    # modify the text by removing stop words and lemmatizing
+    data['text'] = data['text'].apply(preprocess)
 
 
-clean_path = "data/ai-vs-human-text-clean.csv"
-data.to_csv(clean_path, index=False)
+    clean_path = "data/ai-vs-human-text-clean-testing.csv"
+    data.to_csv(clean_path, index=False)
 
-print("Cleaned data saved to", clean_path)
+    print("Cleaned data saved to", clean_path)
+if __name__ == "__main__":
+    main()
