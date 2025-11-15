@@ -2,17 +2,17 @@
 This is a tool to classify an essay (or any text, rather) based on multinomial, naive, Bayes. 
 Simply put, it analyzes at the word frequencies and decides wether the frequencies are more AI-like or human like.
 ## How to use
-Firstly, clone the repo and `cd` into it
+Firstly, clone the repo and `cd` into it:
 ```bash
 git clone https://github.com/RaduTeodorProsie/AI-essay-detector.git && cd AI-essay-detector
 ```
-Next, create a new virtual enviroment and activate it
+Next, create a new virtual enviroment and activate it:
 ```bash
 python -m venv venv
 .venv\Scripts\activate # for windows
 source venv/bin/activate # for linux and mac
 ```
-Following that, install the necessary dependencies
+Following that, install the necessary dependencies:
 ```bash
 pip install -r requirements.txt
 ```
