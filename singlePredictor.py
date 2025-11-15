@@ -1,7 +1,12 @@
 from cleaner import preprocess
 import joblib
 
-model = joblib.load("nb_scratch_model.joblib")
+try:
+    model = joblib.load("nb_scratch_model.joblib")
+except Exception as e:
+    print(f"Could not load model: {e}. You need to use the trainer first")
+    exit(0)
+
 print("Enter text to classify:")
 raw_text = input()
 
